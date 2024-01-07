@@ -1,9 +1,6 @@
-package com.akademi11.auth.api;
-
-
+package com.akademi11.task.api.user;
 
 public class UserDto {
-
     public Long id;
     public String username;
     public String password;

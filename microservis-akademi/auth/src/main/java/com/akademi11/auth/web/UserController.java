@@ -1,10 +1,8 @@
 package com.akademi11.auth.web;
 
+import com.akademi11.auth.api.UserDto;
 import com.akademi11.auth.api.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -25,6 +23,11 @@ public class UserController {
     @PostMapping(value = {"/login", "/signin"})
     public LoginResponse login(@RequestBody LoginRequest loginRequest){
         return userService.login(loginRequest);
+    }
+
+    @GetMapping("/{id}")
+    public UserDto getUserById(@PathVariable String id){
+        return userService.find(Long.parseLong(id));
     }
 
 }

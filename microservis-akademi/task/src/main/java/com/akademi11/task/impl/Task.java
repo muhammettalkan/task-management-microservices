@@ -2,7 +2,6 @@ package com.akademi11.task.impl;
 
 
 import com.akademi11.library.enums.Status;
-import org.springframework.security.core.userdetails.User;
 
 import javax.persistence.*;
 
@@ -15,9 +14,8 @@ public class Task {
     private String title;
     private String description;
     private Status status;
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+
+    private Long userId;
 
     public Long getId() {
         return id;
@@ -51,11 +49,11 @@ public class Task {
         this.status = status;
     }
 
-    public User getUser() {
-        return user;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 }

@@ -20,7 +20,7 @@ spring:
         - id: stock
           uri: lb://stock
           predicates:
-            - Path=/stock/**
+            - Path=/tasks/**
             # =====================================
 server:
   port: 8090

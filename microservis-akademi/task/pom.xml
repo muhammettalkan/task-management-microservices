@@ -11,8 +11,8 @@
 	<groupId>com.akademi11</groupId>
 	<artifactId>task</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>stock</name>
-	<description>stock</description>
+	<name>task</name>
+	<description>task</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2021.0.8</spring-cloud.version>
